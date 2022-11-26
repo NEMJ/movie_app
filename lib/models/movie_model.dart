@@ -38,45 +38,45 @@ class Movies {
   late final int totalResults;
 
   Movies.fromJson(Map<String, dynamic> json) {
-    averageRating = json['averageRating'];
-    backdropPath = json['backdropPath'];
-    createdBy = CreatedBy.fromJson(json['createdBy']);
+    averageRating = json['average_rating'];
+    backdropPath = json['backdrop_path'];
+    createdBy = CreatedBy.fromJson(json['created_by']);
     description = json['description'];
     id = json['id'];
     iso_3166_1 = json['iso_3166_1'];
     iso_639_1 = json['iso_639_1'];
     name = json['name'];
     page = json['page'];
-    posterPath = json['posterPath'];
+    posterPath = json['poster_path'];
     public = json['public'];
     listMovies = 
       List.from(json['results']).map((e) => Movie.fromJson(e)).toList();
     revenue = json['revenue'];
     runtime = json['runtime'];
-    sortBy = json['sortBy'];
-    totalPages = json['totalPages'];
-    totalResults = json['totalResults'];
+    sortBy = json['sort_by'];
+    totalPages = json['total_pages'];
+    totalResults = json['total_results'];
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
-      _data['averageRating'] = averageRating;
-      _data['backdropPath'] = backdropPath;
-      _data['createdBy'] = createdBy.toJson();
+      _data['average_rating'] = averageRating;
+      _data['backdrop_path'] = backdropPath;
+      _data['created_by'] = createdBy.toJson();
       _data['description'] = description;
       _data['id'] = id;
       _data['iso_3166_1'] = iso_3166_1;
       _data['iso_639_1'] = iso_639_1;
       _data['name'] = name;
       _data['page'] = page;
-      _data['posterPath'] = posterPath;
+      _data['poster_path'] = posterPath;
       _data['public'] = public;
       _data['results'] = listMovies.map((e) => e.toJson()).toList();
       _data['revenue'] = revenue;
       _data['runtime'] = runtime;
-      _data['sortBy'] = sortBy;
-      _data['totalPages'] = totalPages;
-      _data['totalResults'] = totalResults;
+      _data['sort_by'] = sortBy;
+      _data['total_pages'] = totalPages;
+      _data['total_results'] = totalResults;
       return _data;
   }
 }
@@ -95,7 +95,7 @@ class CreatedBy {
   late final String username;
 
   CreatedBy.fromJson(Map<String, dynamic> json) {
-    gravatarHash = json['gravatarHash'];
+    gravatarHash = json['gravatar_hash'];
     id = json['id'];
     name = json['name'];
     username = json['username'];
@@ -103,7 +103,7 @@ class CreatedBy {
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
-    _data['gravatarHash'] = gravatarHash;
+    _data['gravatar_hash'] = gravatarHash;
     _data['id'] = id;
     _data['name'] = name;
     _data['username'] = username;
@@ -148,39 +148,39 @@ class Movie {
 
   Movie.fromJson(Map<String, dynamic> json) {
     adult = json['adult'];
-    backdropPath = json['backdropPath'];
-    genreIds = json['genreIds'];
+    backdropPath = json['backdrop_path'];
+    genreIds = json['genre_ids'];
     id = json['id'];
-    mediaType = json['mediaType'];
-    orifinalLanguage = json['orifinalLanguage'];
-    originalTitle = json['originalTitle'];
+    mediaType = json['media_type'];
+    orifinalLanguage = json['original_language'];
+    originalTitle = json['original_title'];
     overview = json['overview'];
     popularity = json['popularity'];
-    posterPath = json['posterPath'];
-    releaseDate = json['releaseDate'];
+    posterPath = json['poster_path'];
+    releaseDate = json['release_date'];
     title = json['title'];
     video = json['video'];
-    voteAverage = json['voteAverage'];
-    voteCount = json['voteCount'];
+    voteAverage = json['vote_average'];
+    voteCount = json['vote_count'];
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
     _data['adult'] = adult;
-    _data['backdropPath'] = backdropPath;
-    _data['genreIds'] = genreIds;
+    _data['backdrop_path'] = backdropPath;
+    _data['genre_ids'] = genreIds;
     _data['id'] = id;
-    _data['mediaType'] = mediaType;
-    _data['orifinalLanguage'] = orifinalLanguage;
-    _data['originalTitle'] = originalTitle;
+    _data['media_type'] = mediaType;
+    _data['original_language'] = orifinalLanguage;
+    _data['original_title'] = originalTitle;
     _data['overview'] = overview;
     _data['popularity'] = popularity;
-    _data['posterPath'] = posterPath;
-    _data['releaseDate'] = releaseDate;
+    _data['poster_path'] = posterPath;
+    _data['release_date'] = releaseDate;
     _data['title'] = title;
     _data['video'] = video;
-    _data['voteAverage'] = voteAverage;
-    _data['voteCount'] = voteCount;
+    _data['vote_average'] = voteAverage;
+    _data['vote_count'] = voteCount;
     return _data;
   }
 }
