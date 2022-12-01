@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: 
   lottie: 
+  shared_preferences:
+  cached_network_image:
 
 dev_dependencies:
   flutter_test:
