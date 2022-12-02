@@ -17,7 +17,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final MovieController _controller = MovieController(
     MoviesCacheRepositoryDecorator(
-      MoviesRepositoryImp(DioServiceImp()),
+      MoviesRepositoryImp(
+        DioServiceImp(),
+      ),
     ),
   );
 
@@ -46,13 +48,13 @@ class _HomePageState extends State<HomePage> {
                         const SizedBox(height: 20),
                         TextField(
                           decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.search),
+                            prefixIcon: const Icon(Icons.search),
                             filled: true,
                             fillColor: Colors.grey.shade700,
-                            border: OutlineInputBorder(),
-                            errorBorder: OutlineInputBorder(),
-                            enabledBorder: OutlineInputBorder(),
-                            focusedBorder: OutlineInputBorder(),
+                            border: const OutlineInputBorder(),
+                            errorBorder: const OutlineInputBorder(),
+                            enabledBorder: const OutlineInputBorder(),
+                            focusedBorder: const OutlineInputBorder(),
                           ),
                           onChanged: _controller.onChanged,
                         ),

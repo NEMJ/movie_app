@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/models/movie_model.dart';
+import '../models/movie_model.dart';
 import '../utils/apis.utils.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -40,7 +40,7 @@ class DetailsPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.title),
+                  const Icon(Icons.title),
                   Text(movie.originalTitle),
                 ],
               ),
@@ -48,7 +48,7 @@ class DetailsPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.calendar_today),
+                  const Icon(Icons.calendar_today),
                   Text(movie.releaseDate),
                 ],
               ),
